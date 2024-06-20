@@ -67,8 +67,16 @@ return {
           end,
         },
       }
-      -- FIXME: Hack to appease mason
-      require'lspconfig'.sourcekit.setup{}
+      -- NOTE: Maso currently does not support sourcekit, so this is some custom setup for that
+      require'lspconfig'.sourcekit.setup{
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      }
     end,
   },
 }
