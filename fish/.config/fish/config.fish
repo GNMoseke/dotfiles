@@ -9,8 +9,7 @@ end
 starship init fish | source
 
 set --global --export MANPAGER batcat
-
-export PATH="$PATH:/opt/nvim/"
+set --global --export EDITOR nvim
 
 # ===== Convenience Aliases =====
 # ensure lsd is installed: https://github.com/lsd-rs/lsd
