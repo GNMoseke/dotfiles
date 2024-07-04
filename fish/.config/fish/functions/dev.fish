@@ -1,7 +1,7 @@
 # Is there a better way to do this? I'm sure
 # Do I care for something this simple? No.
 
-function tmux-dev
+function dev
     cd $argv
     if not set -q TMUX
         tmux new-session -d 'vim .'
