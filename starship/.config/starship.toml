@@ -1,7 +1,6 @@
 palette = "catppuccin_mocha"
 
 format = """
-[](peach)\
 $username\
 [](bg:mauve fg:peach)\
 $directory\
@@ -10,9 +9,8 @@ $git_branch\
 $git_status\
 [](fg:green bg:blue)\
 $golang\
-$nodejs\
 $rust\
-$dart\
+$swift\
 [](fg:blue)\
 $line_break$character"""
 
@@ -20,7 +18,7 @@ $line_break$character"""
 show_always = true
 style_user = "bg:peach fg:text"
 style_root = "bg:peach"
-format = '[ $user ]($style)'
+format = '[  $user ]($style)'
 disabled = false
 
 [directory]
@@ -36,11 +34,6 @@ truncation_symbol = "…/"
 "Music" = " "
 "Pictures" = " "
 
-[docker_context]
-symbol = " "
-style = "bg:#06969A fg:text"
-format = '[ $symbol $context ]($style)'
-
 [git_branch]
 symbol = ""
 style = "bg:green fg:text"
@@ -55,32 +48,15 @@ symbol = " "
 style = "bg:blue fg:text"
 format = '[ $symbol ($version) ]($style)'
 
-[nodejs]
-symbol = ""
-style = "bg:blue fg:text"
-format = '[ $symbol ($version) ]($style)'
-
 [rust]
 symbol = ""
 style = "bg:blue fg:text"
 format = '[ $symbol ($version) ]($style)'
 
-[dart]
-symbol = ""
+[swift]
+symbol = ""
 style = "bg:blue fg:text"
 format = '[ $symbol ($version) ]($style)'
-
-[battery]
-disabled = false
-full_symbol = '󰁹'
-charging_symbol = '󰂄 '
-discharging_symbol = '󰂃'
-empty_symbol = '󰂎'
-format = '[$symbol$percentage ]($style)'
-
-[[battery.display]]
-threshold = 100
-style = "bg:peach fg:text"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
