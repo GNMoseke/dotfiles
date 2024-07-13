@@ -5,13 +5,11 @@ function dev
     cd $argv
     if not set -q TMUX
         tmux new-session -d 'vim .'
-        tmux split-window -h
-        tmux split-window -v 'lazygit'
+        tmux split-window -h -l "40%"
         tmux select-pane -t left
         tmux -2 attach-session -d
     else
-        tmux split-window -h
-        tmux split-window -v 'lazygit'
+        tmux split-window -h -l "40%"
         tmux select-pane -t left
         vim .
     end
