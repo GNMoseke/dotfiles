@@ -19,3 +19,4 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.colorcolumn = "120"
+vim.opt.tw = 120
