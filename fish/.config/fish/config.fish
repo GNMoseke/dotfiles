@@ -27,6 +27,7 @@ switch (uname)
         alias docker="podman"
     case Darwin
         alias cat="bat"
+        set --global --export MANPAGER bat
     case '*'
         echo Unconfigured OS
 end
