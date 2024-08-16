@@ -25,8 +25,10 @@ switch (uname)
         alias cat="batcat"
         alias code="codium"
         alias docker="podman"
+        alias fzf='fzf --preview "batcat --color=always {}"'
     case Darwin
         alias cat="bat"
+        alias fzf='fzf --preview "bat --color=always {}"'
         set --global --export MANPAGER bat
     case '*'
         echo Unconfigured OS
