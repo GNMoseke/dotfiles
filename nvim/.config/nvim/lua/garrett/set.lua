@@ -1,22 +1,26 @@
+-- General
 vim.opt.number = true
-
+vim.opt.termguicolors = true
 vim.opt.swapfile = false
 
+-- Whitespace
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+
+-- Splits
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.opt.smartindent = true
-vim.opt.wrap = false
-
--- this annoys me
+-- Search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-vim.opt.termguicolors = true
-
+-- Text
 vim.opt.colorcolumn = "120"
 vim.opt.tw = 120
+vim.opt.smartindent = true
+vim.opt.wrap = false
