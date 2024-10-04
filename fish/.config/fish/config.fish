@@ -12,7 +12,8 @@ set --global --export EDITOR nvim
 
 # ===== Convenience Aliases =====
 # ensure lsd is installed: https://github.com/lsd-rs/lsd
-alias ls="lsd -l --total-size"
+alias ls="lsd -l"
+alias lss="lsd -l --total-size"
 alias crabrave="open 'https://youtu.be/LDU_Txk06tM?t=28'"
 alias vim="nvim"
 alias loc="tokei"
@@ -33,3 +34,7 @@ switch (uname)
     case '*'
         echo Unconfigured OS
 end
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/garrettmoseke/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
