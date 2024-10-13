@@ -5,5 +5,5 @@ It's the dotfiles, wowee
 2. ensure you have gnu `stow` installed
 
 ```sh
-stow fish git nvim starship tmux wezterm lazygit
+stow fish git nvim starship tmux wezterm lazygit notes
 ```
