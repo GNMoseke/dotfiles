@@ -20,6 +20,34 @@ return {
       local luasnip = require 'luasnip'
       luasnip.config.setup {}
 
+      local icons = {
+        Text = "",
+        Method = "m",
+        Function = "",
+        Constructor = "",
+        Field = "",
+        Variable = "",
+        Class = "",
+        Interface = "",
+        Module = "",
+        Property = "",
+        Unit = "",
+        Value = "",
+        Enum = "",
+        Keyword = "",
+        Snippet = "",
+        Color = "",
+        File = "",
+        Reference = "",
+        Folder = "",
+        EnumMember = "",
+        Constant = "",
+        Struct = "",
+        Event = "",
+        Operator = "",
+        TypeParameter = "",
+      }
+
       cmp.setup {
         snippet = {
           expand = function(args)
@@ -44,6 +72,20 @@ return {
               luasnip.jump(-1)
             end
           end, { 'i', 's' }),
+        },
+        formatting = {
+          fields = { "kind", "abbr", "menu" },
+          format = function(entry, vim_item)
+            -- icons
+            vim_item.kind = string.format("%s", icons[vim_item.kind])
+            vim_item.menu = ({
+              nvim_lsp = "[LSP]",
+              luasnip = "[Snippet]",
+              buffer = "[Buffer]",
+              path = "[Path]",
+            })[entry.source.name]
+            return vim_item
+          end,
         },
         sources = {
           { name = 'nvim_lsp' },
