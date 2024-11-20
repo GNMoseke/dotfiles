@@ -21,6 +21,7 @@ return {
             lspconfig.dockerls.setup {}
             lspconfig.terraformls.setup {}
             lspconfig.lua_ls.setup {}
+            lspconfig.jsonls.setup {}
 
             local signs = { Error = "󰅚 ", Warn = "󰀪 ", Hint = "󰌶 ", Info = " " }
             for type, icon in pairs(signs) do
