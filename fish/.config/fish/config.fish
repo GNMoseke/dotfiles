@@ -9,6 +9,7 @@ end
 starship init fish | source
 
 set --global --export EDITOR nvim
+set --global --export MANPAGER bat
 
 # ===== Convenience Aliases =====
 # ensure lsd is installed: https://github.com/lsd-rs/lsd
@@ -17,20 +18,14 @@ alias lss="lsd -l --total-size"
 alias crabrave="open 'https://youtu.be/LDU_Txk06tM?t=28'"
 alias vim="nvim"
 alias loc="tokei"
+alias cat="bat"
+alias fzf='fzf --preview "bat --color=always {}"'
 
 # OS-specific config
 switch (uname)
     case Linux
-        # bat binary is batcat on debian systems
-        set --global --export MANPAGER batcat
-        alias cat="batcat"
         alias code="codium"
         alias docker="podman"
-        alias fzf='fzf --preview "batcat --color=always {}"'
-    case Darwin
-        alias cat="bat"
-        alias fzf='fzf --preview "bat --color=always {}"'
-        set --global --export MANPAGER bat
     case '*'
         echo Unconfigured OS
 end
