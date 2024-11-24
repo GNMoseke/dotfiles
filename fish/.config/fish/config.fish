@@ -26,8 +26,9 @@ switch (uname)
     case Linux
         alias code="codium"
         alias docker="podman"
+    case Darwin
+        if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
     case '*'
         echo Unconfigured OS
 end
 
-if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
