@@ -13,7 +13,7 @@ return {
                         if mode == "normal" then
                             return " " .. str
                         elseif mode == "insert" then
-                            return " " .. str
+                            return " " .. str
                         elseif mode == "visual" or mode == "v-line" or mode == "v-block" then
                             return " " .. str
                         else
