@@ -1,5 +1,6 @@
 [user]
 	email = gmosedev@proton.me
+	name = Garrett Moseke
 
 [push]
     autoSetupremote = true
