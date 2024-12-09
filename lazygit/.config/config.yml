@@ -23,3 +23,8 @@ theme:
 
 authorColors:
   '*': '#b4befe'
+
+# Create pull request command opens a URL with incorrect escaping #3064
+# https://github.com/jesseduffield/lazygit/issues/3064
+os:
+  openLink: open "$(echo "{{link}}" | sed 's/%2F/\//g')"
