@@ -8,6 +8,6 @@ config.window_background_opacity = 0.85
 config.macos_window_background_blur = 15
 config.font_size = 12
 config.default_cursor_style = 'SteadyBar'
+config.window_decorations = "RESIZE"
 
 return config
-
