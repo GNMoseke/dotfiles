@@ -16,17 +16,31 @@ $line_break$character"""
 
 # TODO: k8s ctx here off env var
 right_format="""
-[](fg:rosewater)$os
+[](fg:sky)$kubernetes\
+[](fg:rosewater bg:sky)$os
 """
 
 [os]
 disabled=false
 style="bg:rosewater fg:text"
-   
 
 [os.symbols]
 Arch = " 󰣇 "
 Macos = "  "
+
+[kubernetes]
+disabled=false
+style="bg:sky fg:text"
+format='[ $symbol$context( \($namespace\)) ]($style)'
+detect_env_vars=['USE_GKE_GCLOUD_AUTH_PLUGIN']
+
+[[kubernetes.contexts]]
+# Using capture groups
+# Contexts from GKE, AWS and other cloud providers usually carry additional information, like the region/zone.
+# The following entry matches on the GKE format (`gke_projectname_zone_cluster-name`)
+# and renames every matching kube context into a more readable format (`gke-cluster-name`):
+context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
+context_alias = "gke-$cluster"
 
 [username]
 show_always = true
