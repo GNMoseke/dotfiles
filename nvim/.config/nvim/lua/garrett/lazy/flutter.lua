@@ -1,3 +1,5 @@
+return {}
+--[[
 return {
     'akinsho/flutter-tools.nvim',
     lazy = false,
@@ -16,3 +18,4 @@ return {
         vim.keymap.set('n', '<leader>oo', require('flutter-tools.outline').toggle, {})
     end
 }
+]]
