@@ -12,13 +12,13 @@ $golang\
 $rust\
 $swift\
 [](fg:blue)\
-$line_break$character"""
-
-# TODO: k8s ctx here off env var
-right_format="""
+$fill\
 [](fg:sky)$kubernetes\
 [](fg:rosewater bg:sky)$os
-"""
+$character"""
+
+[fill]
+symbol = '—'
 
 [os]
 disabled=false
