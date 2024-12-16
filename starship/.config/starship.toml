@@ -14,6 +14,20 @@ $swift\
 [](fg:blue)\
 $line_break$character"""
 
+# TODO: k8s ctx here off env var
+right_format="""
+[](fg:rosewater)$os
+"""
+
+[os]
+disabled=false
+style="bg:rosewater fg:text"
+   
+
+[os.symbols]
+Arch = " 󰣇 "
+Macos = "  "
+
 [username]
 show_always = true
 style_user = "bg:peach fg:text"
