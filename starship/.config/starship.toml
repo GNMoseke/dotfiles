@@ -30,7 +30,7 @@ Macos = "  "
 
 [kubernetes]
 disabled=false
-style="bg:sky fg:text"
+style="bg:sky fg:text italic"
 format='[ $symbol$context( \($namespace\)) ]($style)'
 detect_env_vars=['USE_GKE_GCLOUD_AUTH_PLUGIN']
 
@@ -64,7 +64,7 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:green fg:text"
+style = "bg:green fg:text bold"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
