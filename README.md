@@ -35,3 +35,4 @@ Stuff in here assumes that you have the following tools installed and accessible
 * [lazygit](https://github.com/jesseduffield/lazygit)
 * [starship](https://starship.rs/)
 * [wezterm](https://wezfurlong.org/wezterm/index.html)
+* [fastfetch](https://github.com/fastfetch-cli/fastfetch)
