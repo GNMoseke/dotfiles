@@ -41,13 +41,30 @@ on-focus-changed = ['move-mouse window-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = false
 
+# Floats
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder'
+if.app-id = 'com.apple.finder'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Zoom Meeting'
+if.app-id = 'com.apple.Preview'
 run = 'layout floating'
+
+# Arrange on startup
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.mozilla.firefox'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+if.during-aerospace-startup = true
+run = 'move-node-to-workspace U'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
@@ -94,6 +111,8 @@ outer.right =      8
 # end tell'
 # '''
 
+# These are still a HEAVY WIP while I tweak my voyager config
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-shift-ctrl-cmd-h = 'focus left'
 alt-shift-ctrl-cmd-j = 'focus down'
@@ -106,22 +125,36 @@ shift-cmd-down = 'move down'
 shift-cmd-up = 'move up'
 shift-cmd-right = 'move right'
 
+# See: https://nikitabobko.github.io/AeroSpace/commands#join-with
+ctrl-left = 'join-with left'
+ctrl-down = 'join-with down'
+ctrl-up = 'join-with up'
+ctrl-right = 'join-with right'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-ctrl-cmd-leftSquareBracket = 'resize smart -50'
 alt-shift-ctrl-cmd-rightSquareBracket = 'resize smart +50'
 alt-shift-ctrl-cmd-equal = 'balance-sizes'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-shift-ctrl-cmd-a = 'workspace A'
-alt-shift-ctrl-cmd-o = 'workspace O'
-alt-shift-ctrl-cmd-e = 'workspace E'
-alt-shift-ctrl-cmd-u = 'workspace U'
+alt-shift-ctrl-cmd-a = 'workspace 0'
+alt-shift-ctrl-cmd-o = 'workspace 1'
+alt-shift-ctrl-cmd-e = 'workspace 2'
+alt-shift-ctrl-cmd-u = 'workspace 3'
+alt-shift-ctrl-cmd-0 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-shift-cmd-a = 'move-node-to-workspace A'
-shift-cmd-o = 'move-node-to-workspace O'
-shift-cmd-e = 'move-node-to-workspace E'
-shift-cmd-u = 'move-node-to-workspace U'
+shift-cmd-a = 'move-node-to-workspace 0'
+shift-cmd-o = 'move-node-to-workspace 1'
+shift-cmd-e = 'move-node-to-workspace 2'
+shift-cmd-u = 'move-node-to-workspace 3'
+shift-cmd-0 = 'move-node-to-workspace 9'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#layout
+ctrl-cmd-f = 'layout floating tiling'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
+alt-shift-ctrl-cmd-z = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
