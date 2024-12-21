@@ -7,6 +7,10 @@ It's the dotfiles, wowee
 ```sh
 stow fish git nvim starship tmux wezterm lazygit notes
 ```
+On macOS, you can additionally
+```sh
+stow aerospace sketchybar
+```
 
 ## LSP Servers
 Ensure you have the following lsp servers installed as per [https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md]:
@@ -36,3 +40,8 @@ Stuff in here assumes that you have the following tools installed and accessible
 * [starship](https://starship.rs/)
 * [wezterm](https://wezfurlong.org/wezterm/index.html)
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
+
+### macOS Only
+* [aerospace](https://github.com/nikitabobko/AeroSpace)
+* [sketchybar](https://github.com/FelixKratz/SketchyBar)
+* [borders](https://github.com/FelixKratz/JankyBorders)
