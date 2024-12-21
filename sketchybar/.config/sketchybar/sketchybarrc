@@ -60,6 +60,9 @@ sketchybar --add item clock right \
            --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
            --subscribe battery system_woke power_source_change \
            --add item net right \
-           --set net update_freq=120 icon= script="$PLUGIN_DIR/wifi.sh" 
+           --set net update_freq=120 icon= script="$PLUGIN_DIR/wifi.sh" \
+           --add item music right \
+           --set music script="$PLUGIN_DIR/music.sh" \
+           --subscribe music media_change
 
 sketchybar --update
