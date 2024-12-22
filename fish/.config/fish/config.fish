@@ -14,7 +14,7 @@ set --global --export MANPAGER bat
 # ===== Convenience Aliases =====
 # ensure lsd is installed: https://github.com/lsd-rs/lsd
 alias ls="lsd -l"
-alias lss="lsd -l --total-size"
+alias lss="lsd -l --sizesort --total-size"
 alias crabrave="open 'https://youtu.be/LDU_Txk06tM?t=28'"
 alias vim="nvim"
 alias loc="tokei"
