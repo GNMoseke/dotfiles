@@ -50,6 +50,10 @@ run = 'layout floating'
 if.app-id = 'com.apple.Preview'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.QuickTimePlayerX'
+run = 'layout floating'
+
 # Arrange on startup
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
