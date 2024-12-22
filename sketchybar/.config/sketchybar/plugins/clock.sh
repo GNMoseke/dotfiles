@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 # The $NAME variable is passed from sketchybar and holds the name of
 # the item invoking this script:
 # https://felixkratz.github.io/SketchyBar/config/events#events-and-scripting
-
-sketchybar --set "$NAME" label="$(date '+%A, %d %b, %H:%M')"
+COLOR="0xffb4befe"
+sketchybar --set "$NAME" label="$(date '+%A, %d %b, %H:%M')" label.color="$COLOR" icon.color="$COLOR"
 

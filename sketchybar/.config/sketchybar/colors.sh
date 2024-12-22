@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This file is from the default config
 
 export WHITE=0xffffffff
