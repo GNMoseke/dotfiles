@@ -18,3 +18,7 @@ vim.keymap.set("v", "<", "<gv")
 
 -- Stole this one from a tutorial, paste and keep register
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- Yank to system clipboard
+vim.keymap.set({ 'v' }, '<leader>y', [["+y]])
+vim.keymap.set('n', '<leader>yy', [["+yg$]])
