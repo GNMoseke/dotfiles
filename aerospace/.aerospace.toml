@@ -157,6 +157,8 @@ shift-cmd-0 = 'move-node-to-workspace 9'
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 ctrl-cmd-f = 'layout floating tiling'
 
+alt-shift-ctrl-cmd-f = 'exec-and-forget open -n /Applications/Firefox.app/'
+
 # See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
 alt-shift-ctrl-cmd-z = 'fullscreen'
 
