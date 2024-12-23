@@ -141,17 +141,17 @@ alt-shift-ctrl-cmd-rightSquareBracket = 'resize smart +50'
 alt-shift-ctrl-cmd-equal = 'balance-sizes'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-shift-ctrl-cmd-a = 'workspace 0'
-alt-shift-ctrl-cmd-o = 'workspace 1'
-alt-shift-ctrl-cmd-e = 'workspace 2'
-alt-shift-ctrl-cmd-u = 'workspace 3'
+alt-shift-ctrl-cmd-u = 'workspace 0'
+alt-shift-ctrl-cmd-e = 'workspace 1'
+alt-shift-ctrl-cmd-o = 'workspace 2'
+alt-shift-ctrl-cmd-a = 'workspace 3'
 alt-shift-ctrl-cmd-0 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-shift-cmd-a = 'move-node-to-workspace 0'
-shift-cmd-o = 'move-node-to-workspace 1'
-shift-cmd-e = 'move-node-to-workspace 2'
-shift-cmd-u = 'move-node-to-workspace 3'
+shift-cmd-u = 'move-node-to-workspace 0'
+shift-cmd-e = 'move-node-to-workspace 1'
+shift-cmd-o = 'move-node-to-workspace 2'
+shift-cmd-a = 'move-node-to-workspace 3'
 shift-cmd-0 = 'move-node-to-workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
