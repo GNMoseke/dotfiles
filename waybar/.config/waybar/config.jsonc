@@ -83,7 +83,7 @@
         "format": " {used:0.1f}Gi"
     },
     "temperature": {
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
         "critical-threshold": 90,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
