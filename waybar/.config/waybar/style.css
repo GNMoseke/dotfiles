@@ -44,6 +44,7 @@ window#waybar {
 #custom-power,
 #custom-spotify,
 #custom-notification,
+#custom-updates,
 #cpu,
 #tray,
 #memory,
@@ -112,6 +113,14 @@ window#waybar.empty #window {
 
 #custom-power {
   color: #f38ba8;
+}
+
+#custom-notification {
+  color: #89b4fa;
+}
+
+#custom-updates {
+  color: #fad387;
 }
 
 tooltip {
