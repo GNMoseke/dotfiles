@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <object class="GtkMenu" id="menu">
-    <child>
-		<object class="GtkMenuItem" id="suspend">
-			<property name="label">Suspend</property>
+	<child>
+        <object class="GtkMenuItem" id="lock">
+			<property name="label"> Lock</property>
         </object>
 	</child>
-	<child>
-        <object class="GtkMenuItem" id="hibernate">
-			<property name="label">Hibernate</property>
+    <child>
+		<object class="GtkMenuItem" id="suspend">
+                <property name="label">󰤄 Suspend</property>
         </object>
 	</child>
     <child>
         <object class="GtkMenuItem" id="shutdown">
-			<property name="label">Shutdown</property>
+                <property name="label"> Shutdown</property>
         </object>
     </child>
     <child>
@@ -21,7 +21,7 @@
     </child>
     <child>
 		<object class="GtkMenuItem" id="reboot">
-			<property name="label">Reboot</property>
+                <property name="label">󰜉 Reboot</property>
 		</object>
     </child>
   </object>

@@ -120,7 +120,7 @@
 			"shutdown": "shutdown",
 			"reboot": "reboot",
 			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
+			"lock": "hyprlock"
 		}
     },
     "custom/notification": {
