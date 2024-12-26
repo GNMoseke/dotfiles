@@ -22,7 +22,7 @@ alias cat="bat"
 alias fzf='fzf --preview "bat --color=always {}"'
 
 # fun
-alias pipes="pipes.sh -p 4 -t 1 -s 15 -R -f 60 -r 2000"
+alias pipes="pipes.sh -p 5 -t 1 -s 15 -R -f 60 -r 6000"
 
 # OS-specific config
 switch (uname)
