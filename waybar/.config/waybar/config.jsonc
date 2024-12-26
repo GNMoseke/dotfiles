@@ -28,8 +28,8 @@
     "mpris": {
         "player": "spotify",
         "dynamic-order": [
-            "artist",
-            "title"
+            "title",
+            "artist"
         ],
         "format": "{player_icon} {dynamic} ",
         "format-paused": "{status_icon} <i>{dynamic}</i> ",
@@ -48,7 +48,13 @@
         "active-only": false
     },
     "hyprland/window": {
-        "format": "{title}"
+        "format": "{title}",
+        "max-length": 50,
+        "rewrite": {
+            "(.*) — Mozilla Firefox": " Firefox",
+            "Spotify Premium": " Spotify",
+            "Steam": " Steam"
+        }
     },
     "tray": {
         "show-passive-items": true,
