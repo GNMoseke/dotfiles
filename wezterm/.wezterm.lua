@@ -17,4 +17,10 @@ else
     config.font_size = 10
 end
 
+-- TODO: can be removed once https://github.com/wez/wezterm/issues/5103 included in new wezterm release
+if os.getenv("XDG_CURRENT_DESKTOP") == "Hyprland" then
+	config.enable_wayland = false
+else
+	config.enable_wayland = true
+end
 return config
