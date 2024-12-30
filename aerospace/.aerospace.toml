@@ -58,17 +58,17 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
 if.during-aerospace-startup = true
-run = 'move-node-to-workspace U'
+run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
 if.app-id = 'com.mozilla.firefox'
 if.during-aerospace-startup = true
-run = 'move-node-to-workspace E'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 if.during-aerospace-startup = true
-run = 'move-node-to-workspace A'
+run = 'move-node-to-workspace 3'
 
 # Gaps between windows (inner-*) and between monitor edges (outer-*).
 # Possible values:
