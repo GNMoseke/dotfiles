@@ -85,6 +85,9 @@ outer.bottom =     8
 outer.top =        [{ monitor."^built-in retina display$" = 16}, 48]
 outer.right =      8
 
+[workspace-to-monitor-force-assignment]
+2 = 'secondary'
+
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 # 'main' binding mode must be always presented
@@ -153,6 +156,9 @@ shift-cmd-e = 'move-node-to-workspace 1'
 shift-cmd-o = 'move-node-to-workspace 2'
 shift-cmd-a = 'move-node-to-workspace 3'
 shift-cmd-0 = 'move-node-to-workspace 9'
+
+shift-cmd-n = 'move-workspace-to-monitor next'
+shift-cmd-p = 'move-workspace-to-monitor next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 ctrl-cmd-f = 'layout floating tiling'
