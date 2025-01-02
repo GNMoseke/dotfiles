@@ -54,6 +54,10 @@ run = 'layout floating'
 if.app-id = 'com.apple.QuickTimePlayerX'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.window-title-regex-substring = 'Zoom Meeting'
+run = 'layout floating'
+
 # Arrange on startup
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
@@ -121,57 +125,57 @@ outer.right =      8
 # These are still a HEAVY WIP while I tweak my voyager config
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-shift-ctrl-cmd-h = 'focus left'
-alt-shift-ctrl-cmd-j = 'focus down'
-alt-shift-ctrl-cmd-k = 'focus up'
-alt-shift-ctrl-cmd-l = 'focus right'
+alt-shift-ctrl-h = 'focus left'
+alt-shift-ctrl-j = 'focus down'
+alt-shift-ctrl-k = 'focus up'
+alt-shift-ctrl-l = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-shift-cmd-left = 'move left'
-shift-cmd-down = 'move down'
-shift-cmd-up = 'move up'
-shift-cmd-right = 'move right'
+alt-shift-ctrl-cmd-h = 'move left'
+alt-shift-ctrl-cmd-j = 'move down'
+alt-shift-ctrl-cmd-k = 'move up'
+alt-shift-ctrl-cmd-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#join-with
-ctrl-left = 'join-with left'
-ctrl-down = 'join-with down'
-ctrl-up = 'join-with up'
-ctrl-right = 'join-with right'
+alt-shift-ctrl-left = 'join-with left'
+alt-shift-ctrl-down = 'join-with down'
+alt-shift-ctrl-up = 'join-with up'
+alt-shift-ctrl-right = 'join-with right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-ctrl-cmd-leftSquareBracket = 'resize smart -50'
-alt-shift-ctrl-cmd-rightSquareBracket = 'resize smart +50'
-alt-shift-ctrl-cmd-equal = 'balance-sizes'
+alt-shift-ctrl-leftSquareBracket = 'resize smart -50'
+alt-shift-ctrl-rightSquareBracket = 'resize smart +50'
+alt-shift-ctrl-equal = 'balance-sizes'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-shift-ctrl-cmd-u = 'workspace 0'
-alt-shift-ctrl-cmd-e = 'workspace 1'
-alt-shift-ctrl-cmd-o = 'workspace 2'
-alt-shift-ctrl-cmd-a = 'workspace 3'
-alt-shift-ctrl-cmd-0 = 'workspace 9'
+alt-shift-ctrl-u = 'workspace 0'
+alt-shift-ctrl-e = 'workspace 1'
+alt-shift-ctrl-o = 'workspace 2'
+alt-shift-ctrl-a = 'workspace 3'
+alt-shift-ctrl-0 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-shift-cmd-u = 'move-node-to-workspace 0'
-shift-cmd-e = 'move-node-to-workspace 1'
-shift-cmd-o = 'move-node-to-workspace 2'
-shift-cmd-a = 'move-node-to-workspace 3'
-shift-cmd-0 = 'move-node-to-workspace 9'
+alt-shift-ctrl-cmd-u = 'move-node-to-workspace 0'
+alt-shift-ctrl-cmd-e = 'move-node-to-workspace 1'
+alt-shift-ctrl-cmd-o = 'move-node-to-workspace 2'
+alt-shift-ctrl-cmd-a = 'move-node-to-workspace 3'
+alt-shift-ctrl-cmd-0 = 'move-node-to-workspace 9'
 
-shift-cmd-n = 'move-workspace-to-monitor next'
-shift-cmd-p = 'move-workspace-to-monitor next'
+alt-shift-ctrl-n = 'move-workspace-to-monitor next'
+alt-shift-ctrl-p = 'move-workspace-to-monitor prev'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-ctrl-cmd-f = 'layout floating tiling'
+alt-shift-ctrl-f = 'layout floating tiling'
+
+# See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
+alt-shift-ctrl-z = 'fullscreen'
 
 alt-shift-ctrl-cmd-f = 'exec-and-forget open -n /Applications/Firefox.app/'
 
-# See: https://nikitabobko.github.io/AeroSpace/commands#fullscreen
-alt-shift-ctrl-cmd-z = 'fullscreen'
-
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-alt-tab = 'workspace-back-and-forth'
+alt-shift-ctrl-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-shift-ctrl-cmd-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
