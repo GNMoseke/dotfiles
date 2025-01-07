@@ -23,4 +23,3 @@ vim.opt.smartcase = true
 vim.opt.colorcolumn = "120"
 vim.opt.tw = 140
 vim.opt.smartindent = true
-vim.opt.wrap = false
