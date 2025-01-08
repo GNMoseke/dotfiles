@@ -23,9 +23,9 @@ function swift-nuke
 
     if set -ql _flag_scorchedearth
         if read_confirm
-            rm -rf .build/
+            rm -rI .build/
             swift package clean
-            rm -rf ~/Library/Caches/org.swift.swiftpm \
+            rm -rI ~/Library/Caches/org.swift.swiftpm \
                     ~/Library/org.swift.swiftpm \
                     ~/Library/Caches/sourcekit-lsp \
                     ~/Library/Caches/swift-build \
@@ -35,7 +35,7 @@ function swift-nuke
             echo "💣💣💣 Successful"
         end
     else
-        rm -rf .build/
+        rm -rI .build/
         swift package clean
         echo "💣 Successful"
     end
