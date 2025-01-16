@@ -4,13 +4,10 @@
 function dev
     cd $argv
     if not set -q TMUX
-        tmux new-session -d 'vim .'
-        tmux split-window -h -l "33%"
-        tmux select-pane -t left
+        tmux new-session -d
+        tmux split-window -h -l "66%" 'vim .'
         tmux -2 attach-session -d
     else
-        tmux split-window -h -l "33%"
-        tmux select-pane -t left
-        vim .
+        tmux split-window -h -l "66%" 'vim .'
     end
 end
