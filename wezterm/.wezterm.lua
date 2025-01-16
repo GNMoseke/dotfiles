@@ -10,7 +10,7 @@ config.window_decorations = "RESIZE"
 
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.font_size = 12
-    config.macos_window_background_blur = 15
+    config.macos_window_background_blur = 20
 else
     config.initial_cols = 220
     config.initial_rows = 80
