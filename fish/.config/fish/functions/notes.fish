@@ -2,7 +2,7 @@
 
 function notes
     set -l file_name (date +"%Y-%m-%d").md
-    set -l notes_dir ~/Notes/
+    set -l notes_dir ~/Documents/Notes/
     set -l today_note_path "$notes_dir$file_name"
 
     set -l config_file_dir ~/.config/notes
