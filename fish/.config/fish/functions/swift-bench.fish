@@ -1,4 +1,4 @@
-function bench-swift
+function swift-bench
     if [ $(swift package describe --type json | jq -c '.dependencies[] | select(.identity == "package-benchmark")') ]
         swift package --disable-sandbox benchmark $argv
     else
