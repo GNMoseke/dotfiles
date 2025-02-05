@@ -12,7 +12,6 @@
     ],
     "modules-center": [
         "mpris",
-        "clock#simpleclock",
         "hyprland/window"
     ],
     "modules-right": [
@@ -70,12 +69,8 @@
         "show-passive-items": true,
         "spacing": 10
     },
-    "clock#simpleclock": {
-        "tooltip": false,
-        "format": " {:%H:%M}"
-    },
     "clock": {
-        "format": " {:L%a %d %b}",
+        "format": " {:L%a %d %b, %R}",
         "calendar": {
             "format": {
                 "days": "<span weight='normal'>{}</span>",
@@ -159,6 +154,6 @@
             "updated": "󰮯"
         },
         "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates --interval-seconds 3600 --network-interval-seconds 3600"
+        "exec": "waybar-module-pacman-updates --interval-seconds 300 --network-interval-seconds 300"
     }
 }
