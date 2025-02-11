@@ -28,7 +28,6 @@ alias pipes="pipes.sh -p 5 -t 1 -s 15 -R -f 60 -r 6000"
 switch (uname)
     case Linux
         alias code="codium"
-        alias docker="podman"
         # see: https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
         alias pacprune="sudo pacman -Qdtq | sudo pacman -Rns -"
     case Darwin
