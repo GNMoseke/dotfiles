@@ -2,8 +2,24 @@
 	email = gmosedev@proton.me
 	name = Garrett Moseke
 
+[init]
+	defaultBranch = main
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
 [push]
-    autoSetupremote = true
+    autoSetupRemote = true
+
+[pull]
+    rebase = true
+
+[fetch]
+    prune = true
+    all = true
 
 [alias]
     # `git log` with patches shown with difftastic.
@@ -14,8 +30,23 @@
     difft = -c diff.external=difft diff
     hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 
-[pull]
-    rebase = true
+[column]
+    ui = auto
 
-[init]
-	defaultBranch = main
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[includeIf "gitdir:~/Work/"]
+    path = .gitconfig.work
