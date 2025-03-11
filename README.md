@@ -36,22 +36,23 @@ Stuff in here assumes that you have the following tools installed and accessible
 * [tmux](https://github.com/tmux/tmux/wiki/Installing)
 * [neovim](https://neovim.io/) (ideally 0.10+)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/) (optional)
-* [swift](https://www.swift.org/)
+* [swift](https://www.swift.org/) (optional)
 * [lsd](https://github.com/lsd-rs/lsd)
 * [tokei](https://github.com/XAMPPRocky/tokei)
 * [bat](https://github.com/sharkdp/bat)
-* [codium](https://github.com/VSCodium/vscodium)
-* [podman](https://podman.io/)
 * [fzf](https://github.com/junegunn/fzf)
 * [lazygit](https://github.com/jesseduffield/lazygit)
 * [starship](https://starship.rs/)
 * [wezterm](https://wezfurlong.org/wezterm/index.html)
 * [tailspin](https://github.com/bensadeh/tailspin)
+* [difftastic](https://difftastic.wilfred.me.uk/installation.html)
+* [delta](https://dandavison.github.io/delta/installation.html) (for telescope-undo.nvim only, may remove if I go back to undotree)
 
 ### Fun stuff that I have fish functions for
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
 * [cbonsai](https://gitlab.com/jallbrit/cbonsai)
 * [pipes.sh](https://github.com/pipeseroni/pipes.sh)
+* [Athenaeum](https://github.com/GNMoseke/Athenaeum)
 
 ### macOS Only
 * [aerospace](https://github.com/nikitabobko/AeroSpace)
