@@ -5,9 +5,9 @@ function dev
     cd $argv
     if not set -q TMUX
         tmux new-session -d
-        tmux split-window -h -l "66%" 'vim .'
+        tmux split-window -h -l "75%" 'vim .'
         tmux -2 attach-session -d
     else
-        tmux split-window -h -l "66%" 'vim .'
+        tmux split-window -h -l "75%" 'vim .'
     end
 end
