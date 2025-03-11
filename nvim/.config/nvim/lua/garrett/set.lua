@@ -20,7 +20,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Text
-vim.opt.colorcolumn = "120"
-vim.opt.tw = 140
+vim.opt.colorcolumn = "80"
+vim.opt.tw = 80
 vim.opt.wrap = false
 vim.opt.smartindent = true
