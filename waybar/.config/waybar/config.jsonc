@@ -26,18 +26,15 @@
         "custom/power"
     ],
     "mpris": {
-        "player": "spotify",
         "dynamic-order": [
             "title",
             "artist"
         ],
-        "format": "{player_icon} {dynamic} ",
-        "format-paused": "{status_icon} <i>{dynamic}</i> ",
+        "format": "{status_icon} {dynamic} ",
+        "format-paused": "{status_icon} <i>{dynamic}</i> ",
         "status-icons": {
-            "paused": ""
-        },
-        "player-icons": {
-            "default": ""
+            "paused": "",
+            "playing": ""
         }
     },
     "hyprland/workspaces": {
