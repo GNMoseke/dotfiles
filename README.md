@@ -47,6 +47,7 @@ Stuff in here assumes that you have the following tools installed and accessible
 * [tailspin](https://github.com/bensadeh/tailspin)
 * [difftastic](https://difftastic.wilfred.me.uk/installation.html)
 * [delta](https://dandavison.github.io/delta/installation.html) (for telescope-undo.nvim only, may remove if I go back to undotree)
+* [btop](https://github.com/aristocratos/btop)
 
 ### Fun stuff that I have fish functions for
 * [fastfetch](https://github.com/fastfetch-cli/fastfetch)
