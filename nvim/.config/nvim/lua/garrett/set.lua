@@ -2,6 +2,7 @@
 vim.opt.number = true
 vim.opt.termguicolors = true
 vim.opt.swapfile = false
+vim.opt.winborder = "rounded"
 
 -- Whitespace
 vim.opt.tabstop = 4
