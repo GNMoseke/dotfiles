@@ -11,10 +11,10 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "mpris",
-        "hyprland/window"
+        "mpris"
     ],
     "modules-right": [
+        "hyprland/window",
         "cpu",
         "memory",
         "temperature",
@@ -57,6 +57,8 @@
         "format": "{title}",
         "max-length": 50,
         "rewrite": {
+            "tmux": " WezTerm",
+            "#(.*) \\| (.*) - Discord": " $2 | $1",
             "(.*) — Mozilla Firefox": " Firefox",
             "Spotify Premium": " Spotify",
             "Steam": " Steam"
