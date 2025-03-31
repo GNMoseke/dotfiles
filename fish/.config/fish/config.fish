@@ -30,8 +30,9 @@ switch (uname)
         # see: https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)
         alias pacprune="sudo pacman -Qdtq | sudo pacman -Rns -"
     case Darwin
-        if which swiftenv > /dev/null; status --is-interactive; and source (swiftenv init -|psub); end
+        if [ -f "$HOME/google-cloud-sdk/path.fish.inc" ]; . "$HOME/google-cloud-sdk/path.fish.inc"; end
     case '*'
         echo Unconfigured OS
 end
+
 
