@@ -5,23 +5,12 @@ return {
             { 'j-hui/fidget.nvim', opts = {} },
         },
         config = function()
-            local lspconfig = require('lspconfig')
-
-            lspconfig.sourcekit.setup {
-                capabilities = {
-                    workspace = {
-                        didChangeWatchedFiles = {
-                            dynamicRegistration = true,
-                        },
-                    },
-                },
-            }
-            lspconfig.rust_analyzer.setup {}
-            lspconfig.bashls.setup {}
-            lspconfig.dockerls.setup {}
-            lspconfig.terraformls.setup {}
-            lspconfig.lua_ls.setup {}
-            lspconfig.jsonls.setup {}
+            vim.lsp.enable('sourcekit')
+            vim.lsp.enable('rust_analyzer')
+            vim.lsp.enable('dockerls')
+            vim.lsp.enable('terraformls')
+            vim.lsp.enable('lua_ls')
+            vim.lsp.enable('jsonls')
 
             vim.diagnostic.config({
                 signs = {
