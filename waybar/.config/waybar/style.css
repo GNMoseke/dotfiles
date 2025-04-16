@@ -16,10 +16,10 @@ window#waybar {
 }
 
 .modules-right {
-    padding-right: 10; /* Matches hyprland gaps_out - border_size */
+    padding-right: 10px; /* Matches hyprland gaps_out - border_size */
 }
 .modules-left {
-    padding-left: 10; /* Matches hyprland gaps_out - border_size */
+    padding-left: 10px; /* Matches hyprland gaps_out - border_size */
 }
 
 #workspaces button {
