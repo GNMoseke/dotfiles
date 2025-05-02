@@ -4,6 +4,7 @@ local config = wezterm.config_builder()
 config.color_scheme = 'Catppuccin Mocha'
 config.font = wezterm.font("JetBrainsMono Nerd Font Propo")
 config.enable_tab_bar = false
+config.adjust_window_size_when_changing_font_size = false
 config.window_background_opacity = 0.88
 config.default_cursor_style = 'SteadyBlock'
 config.window_decorations = "RESIZE"
