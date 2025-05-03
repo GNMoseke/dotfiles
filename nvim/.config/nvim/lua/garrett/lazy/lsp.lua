@@ -11,6 +11,7 @@ return {
             vim.lsp.enable('terraformls')
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('jsonls')
+            vim.lsp.enable('fish_lsp')
 
             vim.diagnostic.config({
                 signs = {
