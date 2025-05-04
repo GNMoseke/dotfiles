@@ -15,7 +15,7 @@ function today
     echo -e "\033[0;32m$nl\033[0m"
     echo -e "\033[0;34m$en\033[0m"
 
-    set -l csv "$nl,$en"
+    set -l csv '"'$nl'","'$en'"'
     set -l exists (rg -F "$csv" ~/dotfiles/flashcards/.athenaeum/word_van_vandaag.csv)
     if test -n "$exists" 
         echo "Already in flashcard set!"
