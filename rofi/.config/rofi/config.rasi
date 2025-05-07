@@ -6,10 +6,11 @@
 
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,recursivebrowser";
+	modi:                       "drun,recursivebrowser,music";
     show-icons:                 true;
     display-drun:               "";
     display-recursivebrowser:   "";
+    display-music:              "󰲸";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
 }
