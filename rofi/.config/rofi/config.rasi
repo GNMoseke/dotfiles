@@ -33,7 +33,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       700px;
+    width:                       900px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -84,7 +84,7 @@ textbox-prompt-colon {
 entry {
     enabled:                     true;
     expand:                      false;
-    width:                       250px;
+    width:                       550px;
     padding:                     12px 16px;
     border-radius:               100%;
     background-color:            @background-alt;
