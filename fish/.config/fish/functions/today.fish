@@ -22,6 +22,8 @@ function today
     else
         echo "$csv" >> ~/dotfiles/flashcards/.athenaeum/word_van_vandaag.csv
         echo "Added to flashcard set!"
+        cd ~/dotfiles && git add flashcards/.athenaeum/word_van_vandaag.csv && git commit -m "auto(flashcards): wvv"
+        cd -
     end
     newsboat --quiet
 end
