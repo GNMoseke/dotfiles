@@ -22,6 +22,7 @@ return {
         require("telescope").load_extension("undo")
 
         vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+        vim.keymap.set('n', '<leader>fc', builtin.command_history, {})
         vim.keymap.set('n', '<leader>fh', "<cmd>Telescope find_files hidden=true<cr>", {})
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
         vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
