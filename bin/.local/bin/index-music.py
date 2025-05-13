@@ -43,9 +43,9 @@ $ ls --tree
 │   └── 'Des Rocs - Let Me Live Let Me Die.mp3'
 └── 'MattStaghram - Petty'
     ├── FLAC
-    │   └── 'MattstaGrahm- Petty'
+    │   └── 'MattstaGrahm- Petty.flac'
     ├── MP3
-    │   └── 'MattstaGrahm- Petty'
+    │   └── 'MattstaGrahm- Petty.mp3'
     └── cover.jpg
 '''
 
