@@ -12,6 +12,7 @@ return {
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('jsonls')
             vim.lsp.enable('fish_lsp')
+            vim.lsp.enable('pyright')
 
             vim.diagnostic.config({
                 signs = {
@@ -28,6 +29,7 @@ return {
                         [vim.diagnostic.severity.HINT] = "Hint",
                     },
                 },
+                -- virtual_text = true
             })
 
             vim.api.nvim_create_autocmd('LspAttach', {
