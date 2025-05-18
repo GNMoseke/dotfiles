@@ -69,12 +69,32 @@ for entry in os.listdir(music_base):
 
         if entry != "04 - Singles":
             key = f'ALBUM: {album_path.split('/')[-1]}'
+            qualities = [dir for dir in os.listdir(album_path) if os.path.isdir(os.path.join(album_path, dir))]
+            best_path = album_path
+            found_best = False
+            # FIXME: this is quite a heavy handed loop that can be significantly cleaned up when I'm
+            # feeling less lazy
+            for quality in qualities:
+                if quality.lower() == "flac":
+                    best_path = os.path.join(album_path, quality)
+                    break
+                elif quality.lower() == "wav":
+                    best_path = os.path.join(album_path, quality)
+                    found_best = True
+                elif quality.lower() == "mp3" and not found_best:
+                    best_path = os.path.join(album_path, quality)
+                    found_best = True
+                elif quality.lower() == "opus" and not found_best:
+                    best_path = os.path.join(album_path, quality)
+                else:
+                    print(f"couldn't index quality for {album_path}, found {qualities} but none match")
+                
             album_rofi_str = f'{key}\0icon\x1fthumbnail://{cover_img}'
             if key not in options:
                 options[key] = {
                     "type": "album",
                     "rofi_str": album_rofi_str,
-                    "path": album_path,
+                    "path": best_path,
                     "cover_path": cover_img
                 }
 
