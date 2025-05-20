@@ -38,7 +38,6 @@ return {
                     local map = function(keys, func, desc)
                         vim.keymap.set('n', keys, func, { buffer = args.buf, desc = 'LSP: ' .. desc })
                     end
-
                     map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
                     map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
                     map('gI', require('telescope.builtin').lsp_implementations, '[G]oto [I]mplementation')
@@ -49,6 +48,12 @@ return {
                     map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
                     map('K', vim.lsp.buf.hover, 'Hover Documentation')
                     map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
+                    map('<leader>gne', function ()
+                        vim.diagnostic.jump({ count = 1, float = true, severity = vim.diagnostic.severity.ERROR })
+                    end, '[G]oto [N]ext [E]rror')
+                    map('<leader>gpe', function ()
+                        vim.diagnostic.jump({ count = -1, float = true, severity = vim.diagnostic.severity.ERROR })
+                    end, '[G]oto [P]revious [E]rror')
                     map('<leader>th', function()
                         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
                     end, '[T]oggle Inlay [H]ints')
