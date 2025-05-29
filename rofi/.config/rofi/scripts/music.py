@@ -12,13 +12,21 @@ with open(f"{music_base}.rofi-index.json", 'r') as f:
 selection = sys.argv[1:]
 if selection:
     name = selection[0]
-    path = index[name]["path"]
+    # NOTE: this is mpd specific, since it no-likey abs paths.
+    # FIXME: I *should* be querying the mpd database directly, but there's 2 problems I need to
+    # solve there:
+    # 1. The query only gives back files (individual tracks). I want to support adding full albums
+    # to the queue.
+    # 2. The DB includes every file format for every track, so I'd have to do some post filtering to
+    # find the best quality ones (rather than this way, where it's included in the index)
+    path = index[name]["highest_quality_path_rel"]
     cover_img = index[name]["cover_path"]
     if not path:
         print(f"not found in index: {selection}")
 
     # Whatever music player I'm currently favoring
-    subprocess.run(["amberol", path])
+    # NOTE: this uses cwd for the same reason outlined above w.r.t. mpd
+    subprocess.run(["mpc", "add", path], cwd=music_base)
 
     notif = ["notify-send"]
     if cover_img:
