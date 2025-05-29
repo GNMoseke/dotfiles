@@ -11,7 +11,8 @@
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "mpris"
+        //"mpris",
+        "mpd"
     ],
     "modules-right": [
         "hyprland/window",
@@ -36,6 +37,19 @@
             "paused": "",
             "playing": ""
         }
+    },
+    "mpd": {
+        "format": "{stateIcon} {title} - {artist} ",
+        "format-paused": "{stateIcon} <i>{title} - {artist}</i> ",
+        "format-disconnected": "Disconnected 󰝛",
+        "format-stopped": "Stopped 󰝛",
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "on-click": "mpc toggle",
+        "on-click-right": "rofi -show music -theme ~/.config/rofi/config.rasi",
+        "tooltip-format": "{queueLength} Songs in Queue"
     },
     "hyprland/workspaces": {
         "on-click": "activate",
