@@ -78,7 +78,7 @@ for entry in os.listdir(music_base):
                 if quality.lower() == "flac":
                     best_path = os.path.join(album_path, quality)
                     break
-                elif quality.lower() == "wav":
+                elif quality.lower() == "wav" and not found_best:
                     best_path = os.path.join(album_path, quality)
                     found_best = True
                 elif quality.lower() == "mp3" and not found_best:
@@ -94,7 +94,8 @@ for entry in os.listdir(music_base):
                 options[key] = {
                     "type": "album",
                     "rofi_str": album_rofi_str,
-                    "path": best_path,
+                    "highest_quality_path_abs": best_path,
+                    "highest_quality_path_rel": best_path.strip(music_base),
                     "cover_path": cover_img
                 }
 
@@ -121,7 +122,8 @@ for entry in os.listdir(music_base):
                 options[key] = {
                     "type": "track",
                     "rofi_str": track_rofi_str,
-                    "path": filepath,
+                    "highest_quality_path_abs": filepath,
+                    "highest_quality_path_rel": filepath.strip(music_base),
                     "cover_path": cover_img
                 }
 
