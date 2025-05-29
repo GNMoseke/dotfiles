@@ -19,7 +19,7 @@ alias crabrave="open 'https://youtu.be/LDU_Txk06tM?t=28'"
 alias vim="nvim"
 alias loc="tokei"
 alias cat="bat"
-alias fzf='fzf --preview "bat --color=always {}"'
+alias fzf='fzf --preview "bat --color=always {}" --style full'
 
 # fun
 alias pipes="pipes.sh -p 5 -t 1 -s 15 -R -f 60 -r 6000"
