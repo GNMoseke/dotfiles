@@ -27,6 +27,7 @@ if selection:
     # Whatever music player I'm currently favoring
     # NOTE: this uses cwd for the same reason outlined above w.r.t. mpd
     subprocess.run(["mpc", "add", path], cwd=music_base)
+    subprocess.run(["mpc", "play"])
 
     notif = ["notify-send"]
     if cover_img:
