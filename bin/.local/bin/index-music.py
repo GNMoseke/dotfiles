@@ -1,6 +1,7 @@
 #! /home/garrett/.local/bin/music/bin/python
 import os
 import glob
+import subprocess
 import tinytag
 import json
 import pathlib
@@ -75,17 +76,19 @@ for entry in os.listdir(music_base):
             # FIXME: this is quite a heavy handed loop that can be significantly cleaned up when I'm
             # feeling less lazy
             for quality in qualities:
-                if quality.lower() == "flac":
+                if found_best: break
+                elif quality.lower() == "flac":
                     best_path = os.path.join(album_path, quality)
                     break
-                elif quality.lower() == "wav" and not found_best:
+                elif quality.lower() == "wav":
                     best_path = os.path.join(album_path, quality)
                     found_best = True
-                elif quality.lower() == "mp3" and not found_best:
+                elif quality.lower() == "mp3":
                     best_path = os.path.join(album_path, quality)
                     found_best = True
-                elif quality.lower() == "opus" and not found_best:
+                elif quality.lower() == "opus":
                     best_path = os.path.join(album_path, quality)
+                    found_best = True
                 else:
                     print(f"couldn't index quality for {album_path}, found {qualities} but none match")
                 
@@ -127,5 +130,19 @@ for entry in os.listdir(music_base):
                     "cover_path": cover_img
                 }
 
+def index_playlists():
+    playlists = subprocess.check_output(["mpc", "lsplaylists"]).decode('utf-8').splitlines()
+    for playlist in playlists:
+        key = f"PLAYLIST: {playlist.replace("-", " ").title()}"
+        cover_img = os.path.join(music_base, "playlist-icon.png")
+        rofi_str = f"{key}\0icon\x1fthumbnail://{cover_img}"
+        options[key] = {
+            "type": "playlist",
+            "rofi_str": rofi_str,
+            "cover_path": cover_img,
+            "mpd_name": playlist
+        }
+
+index_playlists()
 with open(f"{music_base}.rofi-index.json", 'w') as f:
     json.dump(options, f)
