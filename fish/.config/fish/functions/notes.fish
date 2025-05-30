@@ -2,7 +2,7 @@
 
 function notes
     set -l file_name (date +"%Y-%m-%d").md
-    set -l notes_dir ~/Documents/Notes/
+    set -l notes_dir ~/Documents/Notes/Daily/
     set -l today_note_path "$notes_dir$file_name"
 
     set -l config_file_dir ~/.config/notes
@@ -23,8 +23,8 @@ function notes
             cat "$config_file_dir/Default.md" >> $today_note_path
         end
     end
-    # cd here so that I can use telescope etc. in the notes dir
-    cd $notes_dir
+    # cd here so that I can use telescope etc. in the top level notes dir
+    cd $notes_dir/..
     $EDITOR $today_note_path
 end
 
