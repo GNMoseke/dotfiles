@@ -4,6 +4,9 @@
 # https://github.com/ericchiang/pup
 function today
     tmux split-window -h "flashcards"
+    # TODO:
+    # * add a "-e" to this command for tracking days that I actually did my flashcards?
+    # * play a custom playlist with mpc? Or shuffle randomly?
     tclock -c Magenta timer -d 10m
     echo -e "\033[1;35m === HET (WILLEKEURIG) WORD VAN VANDAAG === \033[0m"
     set -l wvv (curl -s -L https://www.woordvanvandaag.nl/random | \
@@ -26,4 +29,5 @@ function today
         cd -
     end
     newsboat --quiet
+    notes
 end
