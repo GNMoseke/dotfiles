@@ -1,0 +1,54 @@
+/** Global *******************************************/
+*{
+	all: unset;
+	font-family: JetBrainsMono Nerd Font Propo;
+}
+
+/** Generic window ***********************************/
+.genwin {
+	background-color: #313244;
+	border-radius: 12px;
+}
+
+/** Music ***************************************/
+.album_art {
+	background-size: 144px;
+	min-height: 144px;
+	min-width: 144px;
+	margin: 20px;
+	border-radius: 12px;
+    border: 2px;
+    border-style: solid;
+    border-color: #1e1e2e;
+}
+
+.song {
+	color: #cba6f7;
+	font-size : 18px;
+	font-weight : bold;
+	margin : 40px 16px 0px 0px;
+}
+
+.artist {
+	color: #89b4fa;
+	font-size : 14px;
+	font-weight : normal;
+	margin : 0px 16px 16px 0px;
+}
+
+.btn_prev, .btn_play, .btn_next {
+	font-family: JetBrainsMono Nerd Font Propo;
+}
+.btn_next,
+.btn_prev {
+	color: #fab387;
+	font-size : 20px;
+	font-weight : normal;
+	margin : 0px 16px 16px 0px;
+}
+.btn_play {
+	color: #a6e3a1;
+	font-size : 32px;
+	font-weight : bold;
+	margin : 0px 16px 16px 0px;
+}
