@@ -39,15 +39,15 @@
         }
     },
     "mpd": {
-        "format": "{stateIcon} {title} - {artist} ",
-        "format-paused": "{stateIcon} <i>{title} - {artist}</i> ",
+        "format": "{randomIcon} {title} - {artist} ",
+        "format-paused": "{randomIcon} <i>{title} - {artist}</i> ",
         "format-disconnected": "Disconnected 󰝛",
         "format-stopped": "Nothing in the Queue 󰝛",
         "state-icons": {
             "paused": "",
             "playing": ""
         },
-        "on-click": "mpc toggle",
+        "on-click": "if eww active-windows | grep -q 'music'; then eww close music; else eww open music; fi",
         "on-click-right": "rofi -show music -theme ~/.config/rofi/config.rasi",
         "on-click-middle": "mpc random",
         "random-icons": {
