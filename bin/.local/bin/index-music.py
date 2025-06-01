@@ -98,7 +98,7 @@ for entry in os.listdir(music_base):
                     "type": "album",
                     "rofi_str": album_rofi_str,
                     "highest_quality_path_abs": best_path,
-                    "highest_quality_path_rel": best_path.strip(music_base),
+                    "highest_quality_path_rel": best_path.removeprefix(music_base),
                     "cover_path": cover_img
                 }
 
@@ -126,7 +126,7 @@ for entry in os.listdir(music_base):
                     "type": "track",
                     "rofi_str": track_rofi_str,
                     "highest_quality_path_abs": filepath,
-                    "highest_quality_path_rel": filepath.strip(music_base),
+                    "highest_quality_path_rel": filepath.removeprefix(music_base),
                     "cover_path": cover_img
                 }
 
