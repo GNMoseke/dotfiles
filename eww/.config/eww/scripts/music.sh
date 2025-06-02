@@ -20,7 +20,7 @@ get_status() {
 get_song() {
 	song=`mpc -f %title% current`
 	if [[ -z "$song" ]]; then
-		echo "Nothing in Queue"
+		echo "Unknown Track"
 	else
 		echo "$song"
 	fi	
@@ -30,9 +30,18 @@ get_song() {
 get_artist() {
 	artist=`mpc -f %artist% current`
 	if [[ -z "$artist" ]]; then
-		echo "Nothing in Queue"
+		echo "Unknown Artist"
 	else
 		echo "$artist"
+	fi	
+}
+
+get_album() {
+	album=`mpc -f %album% current`
+	if [[ -z "$album" ]]; then
+		echo "Unknown Album"
+	else
+		echo "$album"
 	fi	
 }
 
@@ -54,6 +63,8 @@ if [[ "$1" == "--song" ]]; then
 	get_song
 elif [[ "$1" == "--artist" ]]; then
 	get_artist
+elif [[ "$1" == "--album" ]]; then
+	get_album
 elif [[ "$1" == "--status" ]]; then
 	get_status
 elif [[ "$1" == "--cover" ]]; then

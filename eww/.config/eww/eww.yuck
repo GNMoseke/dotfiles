@@ -1,6 +1,7 @@
 ;; Music vars
 (defpoll SONG :interval "1s" `scripts/music.sh --song`)
 (defpoll ARTIST :interval "1s" `scripts/music.sh --artist`)
+(defpoll ALBUM :interval "1s" `scripts/music.sh --album`)
 (defpoll STATUS :interval "1s" `scripts/music.sh --status`)
 (defpoll COVER :interval "1s" `scripts/music.sh --cover`)
 
@@ -20,6 +21,7 @@
 		(box :orientation "v" :spacing 4 :space-evenly "false" :vexpand "false" :hexpand "true"
 			(label :halign "center" :valign "center" :class "song" :wrap "true" :justify "center" :lines 1 :truncate "true" :text SONG)
 			(label :halign "center" :valign "center" :class "artist" :wrap "true" :justify "center" :lines 1 :truncate "true" :text ARTIST)
+			(label :halign "center" :valign "center" :class "album" :wrap "true" :justify "center" :lines 1 :truncate "true" :text ALBUM)
 			(box :orientation "h" :spacing 4 :halign "center" :space-evenly "true" :vexpand "false" :hexpand "false"
 				(button :class "btn_prev" :onclick "scripts/music.sh --prev" "󰒮")
 				(button :class "btn_play" :onclick "scripts/music.sh --toggle" STATUS)
