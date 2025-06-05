@@ -54,7 +54,7 @@
             "on": "",
             "off": "󰲸"
         },
-        "tooltip-format": "{randomIcon} {queueLength} Songs in Queue"
+        "tooltip-format": "{randomIcon} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) {queueLength} Songs in Queue"
     },
     "hyprland/workspaces": {
         "on-click": "activate",
