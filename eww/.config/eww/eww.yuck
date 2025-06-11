@@ -25,5 +25,4 @@
 			(box :orientation "h" :spacing 4 :halign "center" :space-evenly "true" :vexpand "false" :hexpand "false"
 				(button :class "btn_prev" :onclick "scripts/music.sh --prev" "󰒮")
 				(button :class "btn_play" :onclick "scripts/music.sh --toggle" STATUS)
-				(button :class "btn_next" :onclick "scripts/music.sh --next" "󰒭"))
-			(box :class "music_bar" :halign "center" :vexpand "false" :hexpand "false"))))
+				(button :class "btn_next" :onclick "scripts/music.sh --next" "󰒭")))))
