@@ -22,6 +22,6 @@ vim.opt.smartcase = true
 
 -- Text
 vim.opt.colorcolumn = "80"
-vim.opt.tw = 100
+vim.opt.tw = 90
 vim.opt.wrap = false
 vim.opt.smartindent = true
