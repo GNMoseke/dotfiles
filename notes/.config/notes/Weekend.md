@@ -1,15 +1,12 @@
 ## Personal
-- [ ] Read at least 2 pages of book in Dutch with coffee
+- [ ] Read 3+ pages of book in Dutch with coffee
 - [ ] Flashcards for 10 minutes
-- [ ] Core/Pushups
 
 ---
 ## Run
 * **Distance:**
 * **Pace:**
+* **Nutrition:**
 
 **Thoughts:**
-
----
-## Quick Notes
 
