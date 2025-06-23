@@ -8,7 +8,6 @@ return {
             vim.lsp.enable('sourcekit')
             vim.lsp.config('sourcekit', { filetypes = {"swift"} })
             vim.lsp.enable('clangd')
-            vim.lsp.enable('rust_analyzer')
             vim.lsp.enable('dockerls')
             vim.lsp.enable('terraformls')
             vim.lsp.enable('lua_ls')
