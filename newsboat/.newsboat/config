@@ -1,4 +1,4 @@
-browser "firefox --new-tab %u"
+browser "xdg-open %u"
 bind k everywhere up
 bind j everywhere down
 
