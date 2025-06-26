@@ -1,0 +1,13 @@
+[user]
+name = "Garrett Moseke"
+email = "gmosedev@proton.me"
+
+# disable pagination for `jj status`, use `delta` for `jj diff` and `jj show`
+[[--scope]]
+--when.commands = ["status"]
+[--scope.ui]
+paginate = "never"
+[[--scope]]
+--when.commands = ["diff", "show"]
+[--scope.ui]
+pager = "delta"
