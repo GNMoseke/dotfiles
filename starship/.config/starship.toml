@@ -46,7 +46,7 @@ context_alias = "gke-$cluster"
 show_always = true
 style_user = "bg:peach fg:text"
 style_root = "bg:peach"
-format = '[  $user ]($style)'
+format = '[  $user ]($style)'
 disabled = false
 
 [directory]
