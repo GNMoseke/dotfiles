@@ -13,6 +13,7 @@ return {
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('jsonls')
             vim.lsp.enable('fish_lsp')
+            vim.lsp.enable('bashls')
             vim.lsp.enable('pyright')
 
             vim.diagnostic.config({
