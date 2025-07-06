@@ -12,11 +12,23 @@ with open(f"{music_base}.rofi-index.json", 'r') as f:
 selection = sys.argv[1:]
 if selection:
     name = selection[0]
-    cover_img = index[name]["cover_path"]
 
-    if index[name]["type"] == "playlist":
+    # Why do lot work when string match do trick?
+    if "Eurydice: Random" in name:
+        eur_command = [f"{pathlib.Path.home()}/.local/bin/eurydice", "surprise-me"]
+        if "Random Mixtape (1 Hour)" in name:
+            subprocess.run(eur_command + ["playlist"])
+        if "Random Mixtape (3 Hours)" in name:
+            subprocess.run(eur_command + ["playlist", "--target-length", "180"])
+        if "Random Album" in name:
+            subprocess.run(eur_command + ["album"])
+        if "Random 3 Albums" in name:
+            subprocess.run(eur_command + ["album", "--count", "3"])
+        cover_img = f"{music_base}/eurydice.png"
+    elif index[name]["type"] == "playlist":
         subprocess.run(["mpc", "load", index[name]["mpd_name"]])
         subprocess.run(["mpc", "play"])
+        cover_img = index[name]["cover_path"]
     else:
         # NOTE: this is mpd specific, since it no-likey abs paths.
         # FIXME: I *should* be querying the mpd database directly, but there's 2 problems I need to
@@ -33,6 +45,7 @@ if selection:
         # NOTE: this uses cwd for the same reason outlined above w.r.t. mpd
         subprocess.run(["mpc", "add", path], cwd=music_base)
         subprocess.run(["mpc", "play"])
+        cover_img = index[name]["cover_path"]
 
     notif = ["notify-send"]
     if cover_img:
@@ -42,4 +55,9 @@ if selection:
     subprocess.run(notif)
     exit(0)
 
-print("\n".join([meta["rofi_str"] for _, meta in index.items()]))
+indexed_items = [meta["rofi_str"] for _, meta in index.items()]
+indexed_items.insert(0, f"Eurydice: Random 3 Albums\0icon\x1fthumbnail://{music_base}/eurydice.png")
+indexed_items.insert(0, f"Eurydice: Random Album\0icon\x1fthumbnail://{music_base}/eurydice.png")
+indexed_items.insert(0, f"Eurydice: Random Mixtape (3 Hours)\0icon\x1fthumbnail://{music_base}/eurydice.png")
+indexed_items.insert(0, f"Eurydice: Random Mixtape (1 Hour)\0icon\x1fthumbnail://{music_base}/eurydice.png")
+print("\n".join(indexed_items))
