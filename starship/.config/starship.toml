@@ -5,6 +5,7 @@ $username\
 [](bg:mauve fg:peach)\
 $directory\
 [](fg:mauve bg:green)\
+${custom.jj}\
 $git_branch\
 $git_status\
 [](fg:green bg:blue)\
@@ -64,12 +65,22 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
+only_attached = true
 style = "bg:green fg:text bold"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = "bg:green fg:text"
 format = '[$all_status$ahead_behind ]($style)'
+
+[custom.jj]
+detect_folders = ['.jj']
+style = "bg:green fg:text bold"
+format = '[ $symbol $output ]($style)'
+symbol = "󱗆 "
+command = '''
+jj log --revisions @ --no-graph --ignore-working-copy --color never --limit 1 --template powerline_summary
+'''
 
 [golang]
 symbol = " "
