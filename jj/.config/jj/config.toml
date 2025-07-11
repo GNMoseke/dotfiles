@@ -2,6 +2,15 @@
 name = "Garrett Moseke"
 email = "gmosedev@proton.me"
 
+[ui]
+editor = 'nvim'
+
+[git]
+push-new-bookmarks = true
+git_push_bookmark = 'garrett/jj/'
+private-commits = "description(glob:'wip:*')"
+
+
 # disable pagination for `jj status`, use `delta` for `jj diff` and `jj show`
 [[--scope]]
 --when.commands = ["status"]
@@ -11,3 +20,29 @@ paginate = "never"
 --when.commands = ["diff", "show"]
 [--scope.ui]
 pager = "delta"
+
+[aliases]
+l = ['log']
+lv = ['log', '--template', 'builtin_log_detailed']
+init = ['git', 'init', '--colocate']
+en = ['edit', '--next']
+
+[template-aliases]
+powerline_summary = '''
+  separate(" ",
+    change_id.shortest(),
+    "|",
+    coalesce(bookmarks, "󰧎"),
+    "|",
+    concat(
+      if(conflict, ""),
+      if(hidden, "󱙝"),
+      if(immutable, ""),
+    ),
+    if(empty, "∅"),
+    coalesce(
+      truncate_end(10, description.first_line(), "…"),
+      "(no description)",
+    ),
+  )
+'''
