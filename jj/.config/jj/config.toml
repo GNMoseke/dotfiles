@@ -31,9 +31,9 @@ en = ['edit', '--next']
 powerline_summary = '''
   separate(" ",
     change_id.shortest(),
-    "|",
+    "‖",
     coalesce(bookmarks, "󰧎"),
-    "|",
+    "‖",
     concat(
       if(conflict, ""),
       if(hidden, "󱙝"),
