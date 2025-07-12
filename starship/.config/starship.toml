@@ -76,7 +76,7 @@ format = '[$all_status$ahead_behind ]($style)'
 [custom.jj]
 detect_folders = ['.jj']
 style = "bg:green fg:text bold"
-format = '[ $symbol $output ]($style)'
+format = '[ $symbol $output  ]($style)'
 symbol = "󱗆 "
 command = '''
 jj log --revisions @ --no-graph --ignore-working-copy --color never --limit 1 --template powerline_summary
