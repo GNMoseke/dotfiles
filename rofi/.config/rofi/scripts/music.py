@@ -49,7 +49,7 @@ if selection:
 
     notif = ["notify-send"]
     if cover_img:
-        notif += ["-i", cover_img]
+        notif += ["-i", cover_img, "--transient"]
     notif += ["-a", "Music", "ADDED TO QUEUE", f"{name}"]
 
     subprocess.run(notif)
