@@ -26,6 +26,8 @@ l = ['log']
 lv = ['log', '--template', 'builtin_log_detailed']
 init = ['git', 'init', '--colocate']
 en = ['edit', '--next']
+push = ['git', 'push']
+pull = ['git', 'fetch']
 
 [template-aliases]
 powerline_summary = '''
