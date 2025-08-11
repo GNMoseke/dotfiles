@@ -20,6 +20,7 @@ alias vim="nvim"
 alias loc="tokei"
 alias cat="bat"
 alias fzf='fzf --preview "bat --color=always {}" --style full'
+alias jj-watch='viddy "jj log --ignore-working-copy --color always"'
 
 # fun
 alias pipes="pipes.sh -p 5 -t 1 -s 15 -R -f 60 -r 6000"
