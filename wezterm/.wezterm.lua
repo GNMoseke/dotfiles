@@ -9,6 +9,7 @@ config.window_background_opacity = 0.88
 config.default_cursor_style = 'SteadyBlock'
 config.window_decorations = "RESIZE"
 config.font_size = 12
+config.warn_about_missing_glyphs = false
 
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.macos_window_background_blur = 20
