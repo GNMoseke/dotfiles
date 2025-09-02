@@ -4,6 +4,10 @@ import json
 import pathlib
 import subprocess
 
+# TODO: when I replace this with eurydice, it needs to be a driver bash script that
+# invokes eurydice correctly (can't pass arguments to the binary from rofi)
+# so it will call eurydice for the list, and then pass back to this script (or some other
+# function) in order to add to the mpd queue.
 music_base = f"{pathlib.Path.home()}/Music/"
 index = {}
 with open(f"{music_base}.rofi-index.json", 'r') as f:
