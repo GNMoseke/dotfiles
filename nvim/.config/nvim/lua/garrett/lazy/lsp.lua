@@ -15,6 +15,7 @@ return {
             vim.lsp.enable('fish_lsp')
             vim.lsp.enable('bashls')
             vim.lsp.enable('pyright')
+            vim.lsp.enable('zls')
 
             vim.diagnostic.config({
                 signs = {
