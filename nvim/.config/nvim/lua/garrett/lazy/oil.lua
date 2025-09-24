@@ -1,7 +1,7 @@
 return {
     'stevearc/oil.nvim',
     opts = {},
-    dependencies = { { "echasnovski/mini.icons", opts = {} } },
+    dependencies = { { "nvim-tree/nvim-web-devicons", opts = {} } },
     -- Show files and directories that start with "."
     config = function()
         require('oil').setup {
