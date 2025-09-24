@@ -6,16 +6,16 @@ return {
         },
         config = function()
             vim.lsp.enable('sourcekit')
-            vim.lsp.config('sourcekit', { filetypes = {"swift"} })
+            vim.lsp.config('sourcekit', { filetypes = { "swift" } })
             vim.lsp.enable('clangd')
-            vim.lsp.enable('dockerls')
-            vim.lsp.enable('terraformls')
             vim.lsp.enable('lua_ls')
             vim.lsp.enable('jsonls')
             vim.lsp.enable('fish_lsp')
             vim.lsp.enable('bashls')
             vim.lsp.enable('pyright')
             vim.lsp.enable('zls')
+
+            vim.lsp.enable('rust_analyzer')
 
             vim.diagnostic.config({
                 signs = {
