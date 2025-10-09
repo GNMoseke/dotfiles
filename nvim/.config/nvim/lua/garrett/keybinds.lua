@@ -1,5 +1,4 @@
 vim.g.mapleader = " "
---vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- center cursor on jump
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
