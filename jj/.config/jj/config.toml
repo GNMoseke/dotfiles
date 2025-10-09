@@ -4,12 +4,12 @@ email = "gmosedev@proton.me"
 
 [ui]
 editor = 'nvim'
+default-command = ["status"]
 
 [git]
 push-new-bookmarks = true
 git_push_bookmark = 'garrett/jj/'
 private-commits = "description(glob:'wip:*')"
-
 
 # disable pagination for `jj status`, use `delta` for `jj diff` and `jj show`
 [[--scope]]
@@ -20,6 +20,7 @@ paginate = "never"
 --when.commands = ["diff", "show"]
 [--scope.ui]
 pager = "delta"
+diff-formatter = ":git"
 
 [aliases]
 l = ['log']
