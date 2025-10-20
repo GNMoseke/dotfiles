@@ -22,6 +22,9 @@ paginate = "never"
 pager = "delta"
 diff-formatter = ":git"
 
+[revset-aliases]
+'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+
 [aliases]
 l = ['log']
 lv = ['log', '--template', 'builtin_log_detailed']
@@ -29,6 +32,14 @@ init = ['git', 'init', '--colocate']
 en = ['edit', '--next']
 push = ['git', 'push']
 pull = ['git', 'fetch']
+# tug from https://andre.arko.net/2025/09/28/stupid-jj-tricks/
+tug = ["util", "exec", "--", "sh", "-c", """
+if [ "x$1" = "x" ]; then
+  jj bookmark move --from "closest_bookmark(@)" --to "closest_pushable(@)"
+else
+  jj bookmark move --to "closest_pushable(@)" "$@"
+fi
+""", ""]
 
 [template-aliases]
 powerline_summary = '''
