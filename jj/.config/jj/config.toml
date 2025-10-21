@@ -6,6 +6,10 @@ email = "gmosedev@proton.me"
 editor = 'nvim'
 default-command = ["status"]
 
+[signing]
+behavior = "own"
+backend = "gpg"
+
 [git]
 push-new-bookmarks = true
 git_push_bookmark = 'garrett/jj/'
