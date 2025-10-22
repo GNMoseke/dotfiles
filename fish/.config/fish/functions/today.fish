@@ -1,10 +1,7 @@
 # Requires:
-# https://github.com/race604/clock-tui
 # https://github.com/newsboat/newsboat
 # https://github.com/ericchiang/pup
 function today
-    tmux split-window -h "tclock -c Magenta timer -d 10m -Q"
-    tmux select-pane -L
     # TODO:
     # * add a "-e" to this command for tracking days that I actually did my flashcards?
     # * play a custom playlist with mpc? Or shuffle randomly?
@@ -30,5 +27,4 @@ function today
         cd -
     end
     newsboat --quiet
-    notes
 end
