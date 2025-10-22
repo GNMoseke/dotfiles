@@ -27,7 +27,8 @@ pager = "delta"
 diff-formatter = ":git"
 
 [revset-aliases]
-'closest_pushable(to)' = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+"closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
+"closest_bookmark(to)" = "heads(::to & bookmarks())"
 
 [aliases]
 l = ['log']
