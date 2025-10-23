@@ -30,11 +30,13 @@ autocommand('BufReadPost', {
     end
 })
 
+autocommand("BufWritePre", { pattern = "*", command = [[kz|:%s/\s\+$//e|'z]], desc = "clear trailing whitespace on save" })
+
 -- MARK: Godot settings, requires nvim server mode
 -- Largely sourced from https://simondalvai.org/blog/godot-neovim/
 
 -- paths to check for project.godot file
-local paths_to_check = {'/', '/../'}
+local paths_to_check = { '/', '/../' }
 local is_godot_project = false
 local godot_project_path = ''
 local cwd = vim.fn.getcwd()
