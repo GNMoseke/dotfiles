@@ -25,6 +25,9 @@ alias jj-watch='viddy "jj log --ignore-working-copy --color always"'
 # fun
 alias pipes="pipes.sh -p 5 -t 1 -s 15 -R -f 60 -r 6000"
 
+# thanks https://github.com/fish-shell/fish-shell/issues/1891#issuecomment-452141339
+bind . 'append-slash-to-double-dot'
+
 # OS-specific config
 switch (uname)
     case Linux
@@ -35,5 +38,3 @@ switch (uname)
     case '*'
         echo Unconfigured OS
 end
-
-
