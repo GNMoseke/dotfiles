@@ -21,3 +21,6 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- Yank to system clipboard
 vim.keymap.set({ 'v' }, '<leader>y', [["+y]])
 vim.keymap.set('n', '<leader>yy', [["+yg$]])
+
+-- Code Review Comment
+vim.keymap.set('n', '<leader>cr', 'O// CR(<C-R>=strftime("%c")<CR>): ')
