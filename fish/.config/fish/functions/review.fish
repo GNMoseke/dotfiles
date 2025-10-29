@@ -12,10 +12,14 @@ function review
     set -l repo_name (basename "$(pwd)")
     mkdir -p "$review_root_dir/$repo_name"
     set -l review_dir "$review_root_dir/$repo_name/$pr_num-review"
-    echo "$pr_branch_name"
-    jj workspace add -r "remote_bookmarks($pr_branch_name)" --name "$pr_num-review" "$review_dir"
-    cd "$review_dir"
-    jj describe -m "Initial review of $pr_num"
+    if test -d "$review_dir"
+        cd "$review_dir"
+        jj new --message "Additional review round: $(date -Ihours)"
+    else
+        jj workspace add -r "remote_bookmarks($pr_branch_name)" --name "$pr_num-review" "$review_dir"
+        cd "$review_dir"
+        jj describe -m "Initial review of $pr_num"
+    end
 
     # Split tmux pane, show full `jj diff` from base ref on left and open a new jj change in vim on the
     # right
@@ -25,7 +29,7 @@ function review
     # expect, maybe still thinking too much in git terms)
     tmux split-window -b -h "jj diff --from 'trunk()' --to @; read -P 'Press enter to continue (this will close the diff pane)'"
     # NOTE: .pr-description.md is globally gitignored
-    echo -e "$pr_description" >> .pr-description.md
+    echo -e "$pr_description" >>.pr-description.md
     nvim -c "set wrap" .pr-description.md
 
     # Make comments as changes in vim directly, saved on the new change. When vim exits,
