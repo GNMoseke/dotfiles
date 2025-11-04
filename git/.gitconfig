@@ -28,7 +28,7 @@
     ds = -c diff.external=difft show --ext-diff
     # `git diff` with difftastic.
     difft = -c diff.external=difft diff
-    hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+    hist = log --pretty=format:'%Cred %h %Creset %ad | %s%Cgreen%d%Creset %C(yellow)[%an]%Creset' --graph --date=short
 
 [column]
     ui = auto
