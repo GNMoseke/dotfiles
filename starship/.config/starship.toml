@@ -1,22 +1,23 @@
+# TODO:
+# * Fix the interaction with jj module/git module (disable git if .jj is found)
+
 palette = "catppuccin_mocha"
 
 format = """
 $username\
-[](bg:mauve fg:peach)\
+[](bg:blue fg:mauve)\
 $directory\
-[](fg:mauve bg:green)\
-${custom.jj}\
+[](fg:blue bg:surface0)\
+[](fg:surface0)\
 $git_branch\
-$git_status\
-[](fg:green bg:blue)\
-$golang\
+${custom.jj}\
 $rust\
 $swift\
-[](fg:blue)\
+$zig\
 $fill\
 [](fg:sky)$kubernetes\
 [](fg:rosewater bg:sky)$os
-$character"""
+$status$character"""
 
 [fill]
 symbol = '—'
@@ -28,6 +29,11 @@ style="bg:rosewater fg:text"
 [os.symbols]
 Arch = " 󰣇 "
 Macos = "  "
+
+[status]
+disabled=false
+symbol="  "
+recognize_signal_code=false
 
 [kubernetes]
 disabled=false
@@ -45,13 +51,13 @@ context_alias = "gke-$cluster"
 
 [username]
 show_always = true
-style_user = "bg:peach fg:text"
-style_root = "bg:peach"
+style_user = "bg:mauve fg:text"
+style_root = "bg:red"
 format = '[  $user ]($style)'
 disabled = false
 
 [directory]
-style = "bg:mauve fg:text"
+style = "bg:blue fg:text"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -67,35 +73,31 @@ truncation_symbol = "…/"
 symbol = ""
 only_attached = true
 style = "bg:green fg:text bold"
-format = '[ $symbol $branch ]($style)'
-
-[git_status]
-style = "bg:green fg:text"
-format = '[$all_status$ahead_behind ]($style)'
+format = "\b[](fg:surface0 bg:green)[ $symbol $branch ]($style)[](fg:green)"
 
 [custom.jj]
 detect_folders = ['.jj']
 style = "bg:green fg:text bold"
-format = '[ $symbol $output  ]($style)'
+format = "\b[](bg:green fg:surface0)[ $symbol $output  ]($style)"
 symbol = "󱗆 "
 command = '''
 jj log --revisions @ --no-graph --ignore-working-copy --color never --limit 1 --template powerline_summary
 '''
 
-[golang]
-symbol = " "
-style = "bg:blue fg:text"
-format = '[ $symbol ($version) ]($style)'
-
 [rust]
 symbol = ""
-style = "bg:blue fg:text"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:red fg:text"
+format = "\b[](fg:green bg:red)[ $symbol ($version) ]($style)[](fg:red bg:surface0)[](fg:surface0)"
 
 [swift]
 symbol = ""
-style = "bg:blue fg:text"
-format = '[ $symbol ($version) ]($style)'
+style = "bg:peach fg:text"
+format = "\b[](bg:green fg:green)[ $symbol ($version) ]($style)[](fg:peach bg:surface0)[](fg:surface0)"
+
+[zig]
+symbol = ""
+style = "bg:yellow fg:text"
+format = "\b[](fg:green bg:yellow)[ $symbol ($version) ]($style)[](fg:yellow bg:surface0)[](fg:surface0)"
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
