@@ -22,6 +22,7 @@
         "pulseaudio",
         "clock",
         "tray",
+        "idle_inhibitor",
         "custom/updates",
         "custom/notification",
         "custom/power"
@@ -110,6 +111,13 @@
     },
     "memory": {
         "format": " {used:0.1f}Gi"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
     },
     "temperature": {
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",

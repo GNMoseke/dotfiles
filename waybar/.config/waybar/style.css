@@ -57,6 +57,7 @@ window#waybar {
 #window,
 #temperature,
 #mpd,
+#idle_inhibitor,
 #mpris {
   padding: 0.3rem 0.6rem;
   margin: 0.4rem 0.25rem;
@@ -77,6 +78,14 @@ window#waybar {
 
 #mpd.stopped {
   color: #f38ba8;
+}
+
+#idle_inhibitor.activated {
+  color: #a6e3a1;
+}
+
+#idle_inhibitor.deactivated {
+  color: #9399b2;
 }
 
 #custom-sep {
