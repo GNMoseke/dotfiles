@@ -33,6 +33,7 @@ diff-formatter = ":git"
 [aliases]
 l = ['log']
 lv = ['log', '--template', 'builtin_log_detailed']
+la = ['log', '-r', "::"]
 init = ['git', 'init', '--colocate']
 en = ['edit', '--next']
 push = ['git', 'push']
@@ -45,6 +46,9 @@ else
   jj bookmark move --to "closest_pushable(@)" "$@"
 fi
 """, ""]
+
+# TODO: finish
+# tmpworkspace = []
 
 [template-aliases]
 powerline_summary = '''
