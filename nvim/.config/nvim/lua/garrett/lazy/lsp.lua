@@ -15,6 +15,7 @@ return {
             vim.lsp.enable('pyright')
             vim.lsp.enable('zls')
             vim.lsp.enable('gdscript')
+            vim.lsp.enable('gleam')
 
             vim.lsp.enable('rust_analyzer')
 
