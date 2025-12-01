@@ -35,7 +35,6 @@ l = ['log']
 lv = ['log', '--template', 'builtin_log_detailed']
 la = ['log', '-r', "::"]
 init = ['git', 'init', '--colocate']
-en = ['edit', '--next']
 push = ['git', 'push']
 pull = ['git', 'fetch']
 # tug from https://andre.arko.net/2025/09/28/stupid-jj-tricks/
@@ -46,6 +45,9 @@ else
   jj bookmark move --to "closest_pushable(@)" "$@"
 fi
 """, ""]
+# from https://ofcr.se/jujutsu-merge-workflow#rebasing-all-parents
+rebp = ['rebase', '-s', '"all:roots(main..@)"', '-d', 'main']
+
 
 # TODO: finish
 # tmpworkspace = []
