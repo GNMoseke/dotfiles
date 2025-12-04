@@ -11,9 +11,11 @@ behavior = "own"
 backend = "gpg"
 
 [git]
-push-new-bookmarks = true
 git_push_bookmark = 'garrett/jj/'
 private-commits = "description(glob:'wip:*')"
+
+[remotes.origin]
+auto-track-bookmarks = "main"
 
 # disable pagination for `jj status`, use `delta` for `jj diff` and `jj show`
 [[--scope]]
