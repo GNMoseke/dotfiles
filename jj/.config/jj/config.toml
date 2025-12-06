@@ -31,6 +31,10 @@ diff-formatter = ":git"
 [revset-aliases]
 "closest_pushable(to)" = 'heads(::to & mutable() & ~description(exact:"") & (~empty() | merges()))'
 "closest_bookmark(to)" = "heads(::to & bookmarks())"
+# bough from https://crabmusket.net/2025/jj-bough-a-useful-alias-for-stacked-branches/
+'bough(x, m)' = 'descendants(ancestors(x) ~ ancestors(m))'
+'bough(x)' = 'bough(x, trunk())'
+'bough' = 'bough(@)'
 
 [aliases]
 l = ['log']
